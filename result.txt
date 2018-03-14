@@ -1,0 +1,12 @@
+In [6]: bysec_time=%timeit -o bysec(0.,5.,0.001)
+6.61 µs ± 161 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+
+In [7]: brentq_time=%timeit -o opt.brentq(fun,0.,5.)
+3.06 µs ± 76.7 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+
+In [8]: bisect_time=%timeit -o opt.bisect(fun,0.,5.)
+10.2 µs ± 111 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+
+In [9]: newton_time=%timeit -o opt.newton(fun, 0.)
+4.41 µs ± 67.1 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+
